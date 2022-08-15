@@ -1,9 +1,9 @@
 package com.epam.training.fooddelivery;
 
-import com.epam.training.fooddelivery.data.CustomerRepository;
-import com.epam.training.fooddelivery.data.FoodRepository;
-import com.epam.training.fooddelivery.data.OrderItemRepository;
-import com.epam.training.fooddelivery.data.OrderRepository;
+import com.epam.training.fooddelivery.repository.CustomerRepository;
+import com.epam.training.fooddelivery.repository.FoodRepository;
+import com.epam.training.fooddelivery.repository.OrderItemRepository;
+import com.epam.training.fooddelivery.repository.OrderRepository;
 import com.epam.training.fooddelivery.domain.*;
 import com.epam.training.fooddelivery.service.*;
 import com.epam.training.fooddelivery.view.CLIView;

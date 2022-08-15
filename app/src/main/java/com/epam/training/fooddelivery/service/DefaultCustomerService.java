@@ -1,6 +1,6 @@
 package com.epam.training.fooddelivery.service;
 
-import com.epam.training.fooddelivery.data.CustomerRepository;
+import com.epam.training.fooddelivery.repository.CustomerRepository;
 import com.epam.training.fooddelivery.domain.Customer;
 import com.epam.training.fooddelivery.domain.User;
 import org.springframework.stereotype.Service;
