@@ -22,7 +22,6 @@ public class Customer extends User {
 
     public Customer(String email, String password, String name, BigDecimal balance) {
         super(email, password);
-        this.id = id;
         this.name = name;
         this.balance = balance;
         this.orders = new ArrayList<>();

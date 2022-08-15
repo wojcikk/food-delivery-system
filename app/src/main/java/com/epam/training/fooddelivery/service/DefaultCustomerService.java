@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 @Service
 public class DefaultCustomerService implements CustomerService {
-    CustomerRepository customerRepository;
+    private final CustomerRepository customerRepository;
 
     public DefaultCustomerService(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;

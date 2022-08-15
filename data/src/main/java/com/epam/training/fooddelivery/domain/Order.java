@@ -6,7 +6,6 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -25,22 +24,6 @@ public class Order {
     private LocalDateTime timestampCreated;
     @OneToMany(mappedBy = "order")
     private List<OrderItem> orderItems;
-
-    public Order(Long orderId, long customerId, LocalDateTime timestampCreated) {
-        this.id = orderId;
-        this.customer.setId(customerId);
-        this.price = new BigDecimal(0);
-        this.timestampCreated = timestampCreated;
-        this.orderItems = new ArrayList<>();
-    }
-
-    public Order(Long orderId, long customerId, BigDecimal price, LocalDateTime timestampCreated, List<OrderItem> orderItems) {
-        this.id = orderId;
-        this.customer.setId(customerId);
-        this.price = price;
-        this.timestampCreated = timestampCreated;
-        this.orderItems = orderItems;
-    }
 
     public Order() {
     }

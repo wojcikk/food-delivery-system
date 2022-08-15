@@ -27,24 +27,13 @@ public class FoodDelivery implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
-
         CustomerService customerService = new DefaultCustomerService(customerRepository);
-        CartService cartService;
-        FoodService foodService;
-        OrderService orderService;
+        FoodService foodService = new DefaultFoodService(foodRepository);
+        CartService cartService = new DefaultCartService();
+        OrderService orderService = new DefaultOrderService(orderRepository, orderItemRepository, customerRepository);
 
 
-        //FileDataStore dataStore = new FileDataStore(BaseDirPath.getBaseDirPath());
-        //dataStore.init();
-        //FoodDeliveryService service = new DefaultFoodDeliveryService(dataStore);
         CLIView view = new CLIView(customerRepository);
-
-
-        foodService = new DefaultFoodService(foodRepository);
-        cartService = new DefaultCartService();
-        orderService = new DefaultOrderService(orderRepository, orderItemRepository, customerRepository);
-
 
         User user = view.readCredentials();
 
