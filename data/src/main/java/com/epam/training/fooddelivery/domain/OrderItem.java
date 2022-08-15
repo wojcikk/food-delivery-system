@@ -77,4 +77,12 @@ public class OrderItem {
     public void setFood(Food food) {
         this.food = food;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
+    }
 }
